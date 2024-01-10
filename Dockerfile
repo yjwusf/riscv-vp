@@ -1,3 +1,5 @@
+# XXX: Need Alpine Linux Edge since the latest release (3.19)
+# only ships SystemC 2.3.3 and does hence not support aarch64.
 FROM alpine:edge
 
 RUN apk update && apk add --no-cache  build-base cmake boost-dev \
