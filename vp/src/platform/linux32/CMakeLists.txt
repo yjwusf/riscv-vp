@@ -5,6 +5,6 @@ add_executable(linux32-vp
         ${HEADERS})
 
 target_link_libraries(linux32-vp rv32 platform-common gdb-mc
-	${Boost_LIBRARIES} systemc pthread)
+	${Boost_LIBRARIES} SystemC::systemc pthread)
 
 INSTALL(TARGETS linux32-vp RUNTIME DESTINATION bin)

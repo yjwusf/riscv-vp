@@ -3,7 +3,7 @@ project(riscv-vp
 	VERSION 1.2.2
 )
 
-option(USE_SYSTEM_SYSTEMC "use systemc version provided by the system" OFF)
+option(USE_SYSTEM_SYSTEMC "use systemc version provided by the system" ON)
 
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Debug)
@@ -24,7 +24,10 @@ include(cmake/AddGitSubmodule.cmake)
 find_package( Boost REQUIRED COMPONENTS iostreams program_options log)
 
 if(USE_SYSTEM_SYSTEMC)
-	find_library(SystemC libsystemc.a)
+	# find_library(SystemC libsystemc.a)
+	set(CMAKE_CXX_STANDARD 17)
+	set(CMAKE_PREFIX_PATH $ENV{SYSTEMC_HOME})
+	find_package(SystemCLanguage HINTS $ENV{SYSTEMC_HOME})
 endif()
 
 subdirs(src)

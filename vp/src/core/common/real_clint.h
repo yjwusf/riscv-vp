@@ -4,7 +4,7 @@
 #include <stdint.h>
 
 #include <chrono>
-#include <systemc>
+#include <systemc.h>
 #include <map>
 #include <tlm_utils/simple_target_socket.h>
 

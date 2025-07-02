@@ -10,7 +10,7 @@
 #include <map>
 #include <unordered_map>
 
-#include <systemc>
+#include <systemc.h>
 
 #include <tlm_utils/simple_target_socket.h>
 

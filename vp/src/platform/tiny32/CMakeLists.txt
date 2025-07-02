@@ -5,6 +5,6 @@ add_executable(tiny32-vp
         ${HEADERS})
 
 target_link_libraries(tiny32-vp rv32 platform-common gdb-mc
-	${Boost_LIBRARIES} systemc pthread)
+	${Boost_LIBRARIES} SystemC::systemc pthread)
 
 INSTALL(TARGETS tiny32-vp RUNTIME DESTINATION bin)
