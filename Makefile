@@ -1,7 +1,7 @@
 MAKEFLAGS += --no-print-directory
 
 # Whether to use a system-wide SystemC library instead of the vendored one.
-USE_SYSTEM_SYSTEMC ?= OFF
+USE_SYSTEM_SYSTEMC ?= ON
 
 vps: vp/src/core/common/gdb-mc/libgdb/mpc/mpc.c vp/build/Makefile
 	$(MAKE) install -C vp/build
